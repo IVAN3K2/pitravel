@@ -1,11 +1,12 @@
 // src/components/Programs.jsx
 import { motion } from "framer-motion";
-import { FaPlane, FaBook, FaUserGraduate } from "react-icons/fa"; // Icônes pour chaque programme
+import { FaPlane, FaBook, FaUserGraduate } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 /**
  * Section Programs pour PI TRAVEL
- * Affiche plusieurs cartes représentant les programmes disponibles
+ * Affiche les cartes des programmes disponibles
+ * Cartes parfaitement centrées et alignées
  */
 const Programs = () => {
   const { t } = useTranslation();
@@ -32,9 +33,10 @@ const Programs = () => {
   return (
     <section
       id="programs"
-      className="max-w-7xl mx-auto px-6 py-16 text-center md:text-left"
+      className="max-w-7xl mx-auto px-6 py-16"
+      aria-label="Nos programmes"
     >
-      {/* ================= Titre de la section ================= */}
+      {/* ================= Titre ================= */}
       <motion.h2
         className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center"
         initial={{ opacity: 0, y: 20 }}
@@ -45,13 +47,18 @@ const Programs = () => {
         {t("programs.title")}
       </motion.h2>
 
-      {/* ================= Cartes des programmes ================= */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* ================= Cartes ================= */}
+      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-3">
         {programs.map((program, index) => (
           <motion.div
             key={index}
-            className="bg-light rounded-xl p-6 shadow-lg flex flex-col items-center text-center hover:shadow-2xl transition-transform"
-            initial={{ opacity: 0, x: 20 }}
+            className="
+              bg-light rounded-xl p-6 shadow-lg
+              flex flex-col items-center text-center
+              hover:shadow-2xl
+              transition-all duration-300
+            "
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{
@@ -61,7 +68,7 @@ const Programs = () => {
               stiffness: 100,
             }}
           >
-            {/* ================= Icône avec micro parallax ================= */}
+            {/* Icône flottante */}
             <motion.div
               className="mb-4"
               animate={{ y: [0, -8, 0] }}
@@ -76,7 +83,9 @@ const Programs = () => {
             </h3>
 
             {/* Description */}
-            <p className="text-primary/80">{program.description}</p>
+            <p className="text-primary/80">
+              {program.description}
+            </p>
           </motion.div>
         ))}
       </div>

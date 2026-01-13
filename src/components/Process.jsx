@@ -37,7 +37,7 @@ const Process = () => {
   return (
     <section
       id="process"
-      className="max-w-7xl mx-auto px-6 py-16 text-center md:text-left"
+      className="max-w-7xl mx-auto px-6 py-16"
     >
       {/* ================= Titre de la section ================= */}
       <motion.h2
@@ -51,7 +51,7 @@ const Process = () => {
       </motion.h2>
 
       {/* ================= Etapes ================= */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-4">
         {steps.map((step, index) => (
           <motion.div
             key={index}

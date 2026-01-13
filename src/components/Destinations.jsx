@@ -32,7 +32,7 @@ const Destinations = () => {
   return (
     <section
       id="destinations"
-      className="max-w-7xl mx-auto px-6 py-16 text-center md:text-left"
+      className="max-w-7xl mx-auto px-6 py-16"
     >
       {/* ================= Titre de la section ================= */}
       <motion.h2
@@ -46,12 +46,15 @@ const Destinations = () => {
       </motion.h2>
 
       {/* ================= Cartes des destinations ================= */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-3">
         {destinations.map((dest, index) => (
           <motion.div
             key={index}
-            className="bg-light rounded-xl p-6 shadow-lg flex flex-col items-center text-center hover:shadow-2xl transition-transform"
-            initial={{ opacity: 0, x: 20 }}
+            className="bg-light rounded-xl p-6 shadow-lg
+              flex flex-col items-center text-center
+              hover:shadow-2xl
+              transition-all duration-300"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{

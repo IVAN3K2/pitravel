@@ -1,19 +1,15 @@
 // src/components/About.jsx
 import { motion } from "framer-motion";
-import { FaGlobe, FaHandshake, FaStar } from "react-icons/fa"; // icônes pour les cartes
+import { FaGlobe, FaHandshake, FaStar } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 /**
  * Section About pour PI TRAVEL
  * Affiche 3 cartes "Pourquoi choisir PI TRAVEL"
- * - Mobilité internationale
- * - Confiance et fiabilité
- * - Excellence et suivi personnalisé
  */
 const About = () => {
-  const { t } = useTranslation(); // Hook i18n pour traductions
+  const { t } = useTranslation();
 
-  // Données des cartes avec traduction
   const cards = [
     {
       icon: <FaGlobe size={30} className="text-secondary" />,
@@ -35,7 +31,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="max-w-7xl mx-auto px-6 py-16 text-center md:text-left"
+      className="max-w-7xl mx-auto px-6 py-16"
       aria-label="Pourquoi choisir PI TRAVEL"
     >
       {/* ================= Titre de la section ================= */}
@@ -61,12 +57,16 @@ const About = () => {
       </motion.p>
 
       {/* ================= Cartes ================= */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
+      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-3">
         {cards.map((card, index) => (
           <motion.div
             key={index}
-            className="bg-light rounded-xl p-6 shadow-lg flex flex-col items-center text-center hover:shadow-2xl transition-transform"
-            initial={{ opacity: 0, x: 20 }}
+            className="
+              bg-light rounded-xl p-6 shadow-lg
+              flex flex-col items-center text-center
+              hover:shadow-2xl transition-transform
+            "
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{
@@ -76,10 +76,10 @@ const About = () => {
               stiffness: 100,
             }}
           >
-            {/* ================= Icône avec micro parallax ================= */}
+            {/* Icône flottante */}
             <motion.div
               className="mb-4"
-              animate={{ y: [0, -8, 0] }} // micro parallax infini
+              animate={{ y: [0, -8, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             >
               {card.icon}

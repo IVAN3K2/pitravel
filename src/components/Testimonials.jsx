@@ -15,19 +15,19 @@ const Testimonials = () => {
     {
       name: "Amina K.",
       role: t("testimonials.student"),
-      photo: "icon.png",
+      photo: "9581121.png",
       feedback: t("testimonials.feedback1"),
     },
     {
       name: "Jean M.",
       role: t("testimonials.student"),
-      photo: "icon.png",
+      photo: "9581121.png",
       feedback: t("testimonials.feedback2"),
     },
     {
       name: "Fatou B.",
       role: t("testimonials.student"),
-      photo: "icon.png",
+      photo: "9581121.png",
       feedback: t("testimonials.feedback3"),
     },
   ];
@@ -49,12 +49,12 @@ const Testimonials = () => {
       </motion.h2>
 
       {/* ================= Témoignages ================= */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-3">
         {testimonials.map((tst, index) => (
           <motion.div
             key={index}
             className="bg-light rounded-xl p-6 shadow-lg flex flex-col items-center text-center hover:shadow-2xl transition-transform"
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{
