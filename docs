@@ -1,0 +1,18 @@
+src/
+ ├─ components/
+ │   ├─ Navbar.jsx
+ │   ├─ Hero.jsx
+ │   ├─ About.jsx
+ │   ├─ Programs.jsx
+ │   ├─ ProgramCard.jsx
+ │   ├─ Destinations.jsx
+ │   ├─ Process.jsx
+ │   ├─ Step.jsx
+ │   ├─ Testimonials.jsx
+ │   ├─ CTA.jsx
+ │   ├─ Contact.jsx
+ │   ├─ Button.jsx
+ │   └─ Footer.jsx
+ ├─ pages/
+ │   └─ Home.jsx
+ └─ App.jsx

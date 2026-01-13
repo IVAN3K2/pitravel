@@ -1,0 +1,98 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "programs": "Programs",
+    "destinations": "Destinations",
+    "process": "Process",
+    "cta": "Apply"
+  },
+  "hero": {
+    "title": "Build your future internationally with PI TRAVEL",
+    "subtitle": "Opportunities beyond borders"
+  },
+  "about": {
+    "title": "Why Choose PI TRAVEL?",
+    "description": "PI TRAVEL supports students and young professionals in their study and travel projects abroad, offering personalized programs, reliable guidance, and quality support to ensure a successful experience at every step.",
+    "internationalMobility": {
+      "title": "International Mobility",
+      "description": "Access opportunities beyond borders and develop your global journey."
+    },
+    "trustedPartner": {
+      "title": "Trusted Partner",
+      "description": "We guide each young person with integrity and transparency for successful projects."
+    },
+    "excellenceGuidance": {
+      "title": "Excellence & Guidance",
+      "description": "Personalized support and expert advice to maximize your chances of success."
+    }
+  },
+  "programs": {
+    "title": "Our Programs",
+    "studyAbroad": {
+      "title": "Study Abroad",
+      "description": "Explore opportunities in different countries to enrich your academic journey."
+    },
+    "languageCourses": {
+      "title": "Language Courses",
+      "description": "Improve your language skills with programs tailored to your level."
+    },
+    "professionalTraining": {
+      "title": "Professional Training",
+      "description": "Develop practical skills to succeed in the job market."
+    }
+  },
+  "destinations": {
+    "title": "Our Destinations",
+    "europe": {
+      "title": "Europe",
+      "description": "Explore major cities and educational opportunities in Europe."
+    },
+    "americas": {
+      "title": "Americas",
+      "description": "Discover unique programs in North and South America."
+    },
+    "asia": {
+      "title": "Asia",
+      "description": "Experience enriching programs in various Asian countries."
+    }
+  },
+  "process": {
+    "title": "Our Process",
+    "step1": {
+      "title": "Prepare Your Documents",
+      "description": "Gather all necessary documents and information for your application."
+    },
+    "step2": {
+      "title": "Departure",
+      "description": "We organize your trip to your study destination."
+    },
+    "step3": {
+      "title": "School Enrollment",
+      "description": "We assist you with enrollment in your chosen institution."
+    },
+    "step4": {
+      "title": "Guidance & Support",
+      "description": "Personalized follow-up to ensure your success and integration."
+    }
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "student": "Student",
+    "feedback1": "Thanks to PI TRAVEL, I could easily fulfill my dream of studying abroad.",
+    "feedback2": "Serious and personalized support from start to finish.",
+    "feedback3": "I recommend PI TRAVEL to anyone wanting a successful international study project."
+  },
+  "cta": {
+    "title": "Ready to transform your future?",
+    "subtitle": "Reach out now on WhatsApp and start your international journey with PI TRAVEL.",
+    "button": "Send a message"
+  },
+  "footer": {
+    "description": "We connect African youth to international opportunities to build their future.",
+    "linksTitle": "Quick Links",
+    "rights": "All rights reserved.",
+    "contacts": "Contact & Social"
+  }
+}
+
