@@ -22,9 +22,9 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      initial={{ y: -80, opacity: 0 }}
+      initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-0 left-0 w-full z-50 bg-light/80 backdrop-blur-md shadow-sm"
     >
       <div className="max-w-7xl mx-auto px-4">
@@ -52,45 +52,43 @@ const Navbar = () => {
               </a>
             ))}
 
-            {/* CTA */}
             <Button href="#contact">
-                {t("navbar.cta")}
+              {t("navbar.cta")}
             </Button>
 
-
-            {/* Language switch */}
             <Button
-                variant="outline"
-                onClick={toggleLanguage}
-                className="flex items-center gap-1"
+              variant="outline"
+              onClick={toggleLanguage}
+              className="flex items-center gap-1"
             >
-                <FaGlobe />
-                {i18n.language.toUpperCase()}
+              <FaGlobe />
+              {i18n.language.toUpperCase()}
             </Button>
-
           </div>
 
-          {/* Mobile button */}
+          {/* Mobile toggle */}
           <button
             className="md:hidden text-2xl"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu (FIXED VERSION) */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.4 }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
             className="md:hidden bg-light shadow-lg"
           >
             <div className="flex flex-col px-6 py-4 gap-4">
+
               {navLinks.map((link) => (
                 <a
                   key={link.name}

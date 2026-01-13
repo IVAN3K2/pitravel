@@ -4,26 +4,25 @@ import { FaPlane, FaLandmark, FaGlobeAmericas } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 /**
- * Section Destinations pour PI TRAVEL
- * Affiche plusieurs cartes pour les destinations disponibles
+ * Section Destinations - ultra responsive
+ * Mobile-first → Tablet → Desktop → Large screens
  */
 const Destinations = () => {
   const { t } = useTranslation();
 
-  // Données des destinations
   const destinations = [
     {
-      icon: <FaPlane size={30} className="text-secondary" />,
+      icon: <FaPlane />,
       title: t("destinations.europe.title"),
       description: t("destinations.europe.description"),
     },
     {
-      icon: <FaLandmark size={30} className="text-secondary" />,
+      icon: <FaLandmark />,
       title: t("destinations.americas.title"),
       description: t("destinations.americas.description"),
     },
     {
-      icon: <FaGlobeAmericas size={30} className="text-secondary" />,
+      icon: <FaGlobeAmericas />,
       title: t("destinations.asia.title"),
       description: t("destinations.asia.description"),
     },
@@ -32,11 +31,21 @@ const Destinations = () => {
   return (
     <section
       id="destinations"
-      className="max-w-7xl mx-auto px-6 py-16"
+      className="
+        max-w-7xl mx-auto
+        px-4 sm:px-6 lg:px-8
+        py-14 sm:py-16 lg:py-20
+      "
+      aria-label="Destinations PI TRAVEL"
     >
-      {/* ================= Titre de la section ================= */}
+      {/* ================= Title ================= */}
       <motion.h2
-        className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center"
+        className="
+          text-2xl sm:text-3xl md:text-4xl
+          font-bold text-primary
+          text-center
+          mb-10 sm:mb-12
+        "
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.3 }}
@@ -45,41 +54,62 @@ const Destinations = () => {
         {t("destinations.title")}
       </motion.h2>
 
-      {/* ================= Cartes des destinations ================= */}
-      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-3">
+      {/* ================= Cards ================= */}
+      <div
+        className="
+          grid gap-6 sm:gap-8
+          grid-cols-1
+          md:grid-cols-2
+          lg:grid-cols-3
+        "
+      >
         {destinations.map((dest, index) => (
           <motion.div
             key={index}
-            className="bg-light rounded-xl p-6 shadow-lg
-              flex flex-col items-center text-center
-              hover:shadow-2xl
-              transition-all duration-300"
-            initial={{ opacity: 0, y: 20 }}
+            className="
+              bg-light
+              rounded-2xl
+              p-6 sm:p-7
+              shadow-md hover:shadow-xl
+              flex flex-col items-center
+              text-center
+              transition-all duration-300
+            "
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{
-              duration: 0.6,
-              delay: index * 0.2,
-              type: "spring",
-              stiffness: 100,
+              delay: index * 0.2, duration: 0.6, type: "spring", stiffness: 100
             }}
           >
-            {/* Icône avec micro parallax */}
+            {/* Icon */}
             <motion.div
-              className="mb-4"
-              animate={{ y: [0, -8, 0] }}
+              className="
+                mb-4
+                text-secondary
+                text-3xl sm:text-4xl
+              "
+              animate={{ y: [0, -6, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             >
               {dest.icon}
             </motion.div>
 
-            {/* Titre */}
-            <h3 className="text-xl font-semibold text-primary mb-2">
+            {/* Card title */}
+            <h3
+              className="
+                text-base sm:text-lg md:text-xl
+                font-semibold text-primary
+                mb-2
+              "
+            >
               {dest.title}
             </h3>
 
-            {/* Description */}
-            <p className="text-primary/80">{dest.description}</p>
+            {/* Card description */}
+            <p className="text-sm sm:text-base text-primary/80 leading-relaxed">
+              {dest.description}
+            </p>
           </motion.div>
         ))}
       </div>

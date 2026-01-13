@@ -16,3 +16,23 @@ src/
  ├─ pages/
  │   └─ Home.jsx
  └─ App.jsx
+
+ <div className="flex items-center justify-between mt-4">
+                {/* CTA */}
+                <Button
+                    href="#contact"
+                    onClick={() => setIsOpen(false)}
+                >
+                    {t("navbar.cta")}
+                </Button>
+
+                {/* Language switch */}
+                <Button
+                    variant="outline"
+                    onClick={toggleLanguage}
+                    className="flex items-center gap-2"
+                >
+                    <FaGlobe />
+                    {i18n.language.toUpperCase()}
+                </Button>
+</div>

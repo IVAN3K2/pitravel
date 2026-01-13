@@ -6,12 +6,11 @@ import { useTranslation } from "react-i18next";
 /**
  * Section Programs pour PI TRAVEL
  * Affiche les cartes des programmes disponibles
- * Cartes parfaitement centrées et alignées
+ * Cartes parfaitement centrées et alignées, responsive jusqu'au bout
  */
 const Programs = () => {
   const { t } = useTranslation();
 
-  // Données des programmes avec traduction
   const programs = [
     {
       icon: <FaPlane size={30} className="text-secondary" />,
@@ -33,12 +32,12 @@ const Programs = () => {
   return (
     <section
       id="programs"
-      className="max-w-7xl mx-auto px-6 py-16"
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20"
       aria-label="Nos programmes"
     >
       {/* ================= Titre ================= */}
       <motion.h2
-        className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center"
+        className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-12 text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.3 }}
@@ -48,7 +47,7 @@ const Programs = () => {
       </motion.h2>
 
       {/* ================= Cartes ================= */}
-      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {programs.map((program, index) => (
           <motion.div
             key={index}
@@ -56,7 +55,7 @@ const Programs = () => {
               bg-light rounded-xl p-6 shadow-lg
               flex flex-col items-center text-center
               hover:shadow-2xl
-              transition-all duration-300
+              transition-transform duration-300
             "
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -78,12 +77,12 @@ const Programs = () => {
             </motion.div>
 
             {/* Titre */}
-            <h3 className="text-xl font-semibold text-primary mb-2">
+            <h3 className="text-lg sm:text-xl md:text-lg lg:text-xl font-semibold text-primary mb-2">
               {program.title}
             </h3>
 
             {/* Description */}
-            <p className="text-primary/80">
+            <p className="text-sm sm:text-base md:text-sm lg:text-base text-primary/80">
               {program.description}
             </p>
           </motion.div>
