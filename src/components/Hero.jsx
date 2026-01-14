@@ -23,6 +23,7 @@ const Hero = () => {
         py-12 sm:py-16 lg:py-24
         gap-8
       "
+      aria-label="Section principale de présentation de PI TRAVEL et accès à la candidature ou au contact via WhatsApp"
     >
       {/* ================= Hero Texte ================= */}
       <motion.div
