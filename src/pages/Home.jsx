@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import Stats from "../components/Stats";
 import About from "../components/About";
 import Programs from "../components/Programs";
 import Destinations from "../components/Destinations";
@@ -15,6 +16,7 @@ const Home = () => {
       <Navbar />
       <main className="pt-16">
         <Hero />
+        <Stats />
         <About />
         <Programs />
         <Destinations />

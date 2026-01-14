@@ -27,6 +27,12 @@
       "description": "Personalized support and expert advice to maximize your chances of success."
     }
   },
+  "stats": {
+    "sectionLabel": "PI TRAVEL Statistics",
+    "visa": "VISAs issued",
+    "students": "Supported Students",
+    "destinations": "Destinations"
+  },
   "programs": {
     "title": "Our Programs",
     "studyAbroad": {

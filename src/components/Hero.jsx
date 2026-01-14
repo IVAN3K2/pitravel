@@ -20,7 +20,7 @@ const Hero = () => {
         text-center md:text-left
         max-w-7xl mx-auto
         px-4 sm:px-6 lg:px-8
-        py-12 sm:py-16 lg:py-24
+        py-4 sm:py-6 lg:py-8
         gap-8
       "
       aria-label="Section principale de présentation de PI TRAVEL et accès à la candidature ou au contact via WhatsApp"

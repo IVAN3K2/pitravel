@@ -27,6 +27,12 @@
       "description": "Un suivi personnalisé et des conseils experts pour maximiser vos chances de succès."
     }
   },
+  "stats": {
+    "sectionLabel": "Statistiques PI TRAVEL",
+    "visa": "VISA délivrés",
+    "students": "Étudiants accompagnés",
+    "destinations": "Destinations"
+  },
   "programs": {
     "title": "Nos Programmes",
     "studyAbroad": {
