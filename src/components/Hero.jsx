@@ -43,7 +43,7 @@ const Hero = () => {
         {/* ================= CTA ================= */}
         <div className="flex justify-center md:justify-start">
           <Button
-            href="#contact"
+            href="https://wa.me/682049276"
             className="px-6 py-3 text-lg sm:text-xl rounded-lg shadow-lg hover:shadow-xl transition-all"
           >
             {t("navbar.cta")}

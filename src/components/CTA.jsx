@@ -11,9 +11,6 @@ import { useTranslation } from "react-i18next";
 const CTA = () => {
   const { t } = useTranslation();
 
-  // Lien WhatsApp
-  const whatsappLink = "https://wa.me/682049276";
-
   return (
     <section
       id="contact"
@@ -68,7 +65,7 @@ const CTA = () => {
           transition={{ delay: 0.2, duration: 0.6, type: "spring", stiffness: 100 }}
         >
           <Button
-            href={whatsappLink}
+            href="https://wa.me/682049276"
             target="_blank"
             variant="secondary"
             className="

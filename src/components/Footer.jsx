@@ -92,12 +92,12 @@ const Footer = () => {
           </h3>
 
           {/* Contacts texte AVEC ICONS */}
-          <div className="flex flex-col gap-2 text-sm">
+          <div className="flex flex-col gap-2 text-sm items-center md:items-start">
             <a
               href="https://wa.me/682049276"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-secondary transition"
+              className="flex items-center justify-center md:justify-start gap-2 hover:text-secondary transition"
             >
               <FaWhatsapp />
               +237 6 82 04 92 76
@@ -107,7 +107,7 @@ const Footer = () => {
               href="https://wa.me/652427807"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-secondary transition"
+              className="flex items-center justify-center md:justify-start gap-2 hover:text-secondary transition"
             >
               <FaWhatsapp />
               +237 6 52 42 78 07
@@ -115,12 +115,13 @@ const Footer = () => {
 
             <a
               href="mailto:pi87travel@gmail.com"
-              className="flex items-center gap-2 hover:text-secondary transition"
+              className="flex items-center justify-center md:justify-start gap-2 hover:text-secondary transition"
             >
               <FaEnvelope />
               pi87travel@gmail.com
             </a>
           </div>
+
 
           {/* Icônes animées */}
           <ul className="flex justify-center md:justify-start gap-4 mt-3">

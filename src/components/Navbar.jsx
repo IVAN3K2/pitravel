@@ -52,7 +52,7 @@ const Navbar = () => {
               </a>
             ))}
 
-            <Button href="#contact">
+            <Button href="https://wa.me/682049276">
               {t("navbar.cta")}
             </Button>
 
@@ -103,7 +103,7 @@ const Navbar = () => {
               <div className="flex items-center justify-between mt-4">
                 {/* CTA */}
                 <Button
-                    href="#contact"
+                    href="https://wa.me/682049276"
                     onClick={() => setIsOpen(false)}
                 >
                     {t("navbar.cta")}
