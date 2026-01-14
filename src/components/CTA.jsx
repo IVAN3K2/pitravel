@@ -65,7 +65,7 @@ const CTA = () => {
           transition={{ delay: 0.2, duration: 0.6, type: "spring", stiffness: 100 }}
         >
           <Button
-            href="https://wa.me/682049276"
+            href="https://wa.me/237682049276"
             target="_blank"
             variant="secondary"
             className="

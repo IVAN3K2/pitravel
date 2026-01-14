@@ -94,7 +94,7 @@ const Footer = () => {
           {/* Contacts texte AVEC ICONS */}
           <div className="flex flex-col gap-2 text-sm items-center md:items-start">
             <a
-              href="https://wa.me/682049276"
+              href="https://wa.me/237682049276"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center md:justify-start gap-2 hover:text-secondary transition"
@@ -104,7 +104,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://wa.me/652427807"
+              href="https://wa.me/237652427807"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center md:justify-start gap-2 hover:text-secondary transition"
