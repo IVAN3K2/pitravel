@@ -1,4 +1,4 @@
-# PiTravel – Business Websit
+# PiTravel – Business Website
 
 Website built for an agency specializing in international mobility support.
 
